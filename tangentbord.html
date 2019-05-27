@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Tangentbord</title>
-    <script type="text/javascript">
 
-    </script>
     <style media="screen">
       body{
         background-color: black;
@@ -87,10 +85,10 @@
         width: 6.8vw;
         color: #33ccf9;
       }
-      #shift1{
+      #ShiftLeft{
         width: 7.68vw;
       }
-      #shift2{
+      #ShiftRight{
         width: 14vw;
       }
       #rad6{
@@ -104,7 +102,7 @@
         width: 6.8vw;
         color: #903ee5;
       }
-      #space{
+      #Space{
         width: 35.73vw;
       }
       #rad7{
@@ -294,13 +292,13 @@
       <div class="tangrad4" id="KeyL">
         <p>L</p>
       </div>
-      <div class="tangrad4" id="">
+      <div class="tangrad4" id="Semicolon">
         <p>Ö</p>
       </div>
-      <div class="tangrad4">
+      <div class="tangrad4" id="Quote">
         <p>Ä</p>
       </div>
-      <div class="tangrad4">
+      <div class="tangrad4" id="Backslash">
         <p>*<br>'</p>
       </div>
       <div class="tangrad4" id="Enter2">
@@ -308,74 +306,74 @@
       </div>
     </div>
     <div id="rad5">
-      <div class="tangrad5" id="shift1">
+      <div class="tangrad5" id="ShiftLeft">
         <p>Shift</p>
       </div>
-      <div class="tangrad5">
+      <div class="tangrad5" id="IntlBackslash">
         <p>><br><|</p>
       </div>
-      <div class="tangrad5">
+      <div class="tangrad5" id="KeyZ">
         <p>Z</p>
       </div>
-      <div class="tangrad5">
+      <div class="tangrad5" id="KeyX">
         <p>X</p>
       </div>
-      <div class="tangrad5">
+      <div class="tangrad5" id="KeyC">
         <p>C</p>
       </div>
-      <div class="tangrad5">
+      <div class="tangrad5" id="KeyV">
         <p>V</p>
       </div>
-      <div class="tangrad5">
+      <div class="tangrad5" id="KeyB">
         <p>B</p>
       </div>
-      <div class="tangrad5">
+      <div class="tangrad5" id="KeyN">
         <p>N</p>
       </div>
-      <div class="tangrad5">
+      <div class="tangrad5" id="KeyM">
         <p>M</p>
       </div>
-      <div class="tangrad5">
+      <div class="tangrad5" id="Comma">
         <p>;<br>,</p>
       </div>
-      <div class="tangrad5">
+      <div class="tangrad5" id="Period">
         <p>:<br>.</p>
       </div>
-      <div class="tangrad5">
+      <div class="tangrad5" id="Slash">
         <p>_<br>-</p>
       </div>
-      <div class="tangrad5" id="shift2">
+      <div class="tangrad5" id="ShiftRight">
         <p>Shift</p>
     </div>
     <div id="rad6">
-      <div class="tangrad6">
+      <div class="tangrad6" id="ControlLeft">
         <p>Ctrl</p>
       </div>
       <div class="tangrad6">
         <p>Fn</p>
       </div>
-      <div class="tangrad6">
+      <div class="tangrad6" id="MetaLeft">
         <p>Window</p>
       </div>
-      <div class="tangrad6">
+      <div class="tangrad6" id="AltLeft">
         <p>Alt</p>
       </div>
-      <div class="tangrad6" id="space">
+      <div class="tangrad6" id="Space">
 
       </div>
-      <div class="tangrad6">
+      <div class="tangrad6" id="AltRight">
         <p>AltGr</p>
       </div>
-      <div class="tangrad6">
+      <div class="tangrad6" id="ControlRight">
         <p>Ctrl</p>
       </div>
-      <div class="tangrad6">
+      <div class="tangrad6" id="PageUp">
         <p>Page<br>Up</p>
       </div>
-      <div class="tangrad6">
+      <div class="tangrad6" id="ArrowUp">
         <p>^<br>|</p>
       </div>
-      <div class="tangrad6">
+      <div class="tangrad6" id="PageDown">
         <p>Page<br>Down</p>
       </div>
     </div>
@@ -383,15 +381,28 @@
       <div class="tangrad7" id="filler">
 
       </div>
-      <div class="tangrad7">
+      <div class="tangrad7" id="ArrowLeft">
         <p><-</p>
       </div>
-      <div class="tangrad7">
+      <div class="tangrad7" id="ArrowDown">
         <p>|<br>v</p>
       </div>
-      <div class="tangrad7">
+      <div class="tangrad7" id="ArrowRight">
         <p>-></p>
       </div>
     </div>
+
+
+
+    <script>
+      function Light() {
+        document.getElementById(event.code).style.backgroundColor = "white";
+      }
+      document.addEventListener("KeyDown", Light);
+      function Default() {
+        document.getElementById(event.code).style.backgroundColor = "black";
+      }
+      document.addEventListener("KeyUp", Default);
+    </script>
   </body>
 </html>
