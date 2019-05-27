@@ -391,18 +391,15 @@
         <p>-></p>
       </div>
     </div>
-
-
-
     <script>
       function Light() {
         document.getElementById(event.code).style.backgroundColor = "white";
       }
-      document.addEventListener("KeyDown", Light);
+      document.addEventListener("keyDown", Light);
       function Default() {
         document.getElementById(event.code).style.backgroundColor = "black";
       }
-      document.addEventListener("KeyUp", Default);
+      document.addEventListener("keyUp", Default);
     </script>
   </body>
 </html>
